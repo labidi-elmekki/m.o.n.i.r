@@ -1,30 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>صفحة اعمالي الشخصية </title>
-<style>
-    .box{
-        position: relative;
-        display: inline-block; /* Make the width of box same as image */
-    }
-    .box .text{
-        position: absolute;
-        z-index: 999;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        top: 40%; /* Adjust this value to move the positioned div up and down */
-        text-align: center;
-        width: 60%; /* Set the width of the positioned div */
-    }
-</style>
-</head> 
+<!DOCTYPE html> <html> <head> 	<title>صفحتي الشخصية</title> 	<style> 		/* تنسيق العناصر */ 		body { 			font-family: Arial, sans-serif; 			margin: 0; 			padding: 0; 			background-color: #f8f8f8; 		} 		 		.container { 			max-width: 960px; 			margin: 0 auto; 			padding: 20px; 			background-color: #fff; 			box-shadow: 0 0 10px rgba(0,0,0,0.2); 		} 		 		h1 { 			font-size: 36px; 			margin-top: 0; 		} 		 		p { 			font-size: 16px; 			line-height: 1.5; 		} 		 		.btn { 			display: inline-block; 			padding: 10px 20px; 			font-size: 18px; 			font-weight: bold; 			color: #fff; 			background-color: #007bff; 			border: none; 			border-radius: 5px; 			cursor: pointer; 		} 		 		.btn:hover { 			background-color: #0062cc; 		} 		 		.dropdown { 			position: relative; 			display: inline-block; 		} 		
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			font-size: 16px;
+			text-align: left;
+		}
+		
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+	</style>
+</head>
 <body>
-    <div class="box">
-          <div class="text">
-            <h1>صفحتي الشخصية مرحباً بكم .</h1>
-        </div>
-    </div>
-</body>
-</html>
+	<div class="container">
+		<h1>مرحبًا بك في صفحتي الشخصية</h1>
+		<p>هذه الصفحة تحتوي على قائمة منسدلة و بعض الازرار ل معرفة حول و بعض المعلومات.</p>
+		
+		<div class="dropdown">
+			<button class="btn">القائمة المنسدلة</button>
+			<div class="dropdown-content">
+				<a href="#">الرئيسية</a>
+				<a href="#">المشاريع</a>
+				<a href="#">اتصل بنا</a>
+			</div>
+		</div>
+		
+		<button class="btn">حول</button>
+		
+		<button class="btn">معلومات</button>
+		
+		<br>
+		<br>
+		
+		<button class="btn">
+
+Copy code
+	<p>هذه بعض التطبيقات التي يمكنك تحميلها:</p>
+	
+	<ul>
+		<li><a href="#">تطبيق 1</a></li>
+		<li><a href="#">تطبيق 2</a></li>
+		<li><a href="#">تطبيق 3</a></li>
+		<li><a href="#">تطبيق 4</a></li>
+	</ul>
+</div>
