@@ -1,53 +1,116 @@
-<!DOCTYPE html>
 <html lang="ar">
-<head>
-	<meta charset="UTF-8">
+   <head>
+   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>حول</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<style>
-	body {
-  direction: rtl;
-	}	
-	</style>
-</head>
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<h1> صفحتي الشخصية </h1>
-			</div>
-			<ul class="nav-links">
-				<li><a href="index.html">الرئيسية</a></li>
-				<li><a href="projects.html">المشاريع</a></li>
-				<li><a href="about.html">حول</a></li>
-				<li><a href="contact.html">اتصل بنا</a></li>
-			</ul>
-			<div class="burger">
-				<div class="line1"></div>
-				<div class="line2"></div>
-				<div class="line3"></div>
-			</div>
-		</nav>
-	</header>
+     <meta name="theme-color" content="black">
+	 <title>حول</title>
+     <style>
+     html{
+       font-family: "Lucida Console", "Courier New", monospace;
+       color: white;
+       text-shadow:3px 1.5px 3px blue;
+     }
+     body{
+	 direction: rtl;
+     overflow-y: hidden ! important;
+     overflow-y: hidden ! important;
+     background-color: #000;
 
-	<main>
-		<section class="about-section">
-			<h1>من أنا ؟</h1>
-<p>خريج معاهد و الحمد لله و حاصل على شهادتى تقني سامي شبكات و قواعد معطيات  ، كما اني عامل حر  "freelance" على اكثر من منصة ، اجيد التعامل مع تطبيقات ادوبي ، حاليا اتعلم لغة بايثون...
- (⁠ ⁠ ⁠•⁠ ⁠‿⁠ ⁠•⁠ ⁠ ⁠)</p>
-	</main> 
-
-
-	<footer>
-		<div class="footer-container">
-			<div class="github-icon">
-				<a href="https://github.com/labidi-elmekki"><i class="fab fa-github"></i></a>
-			</div>
-			<p>جميع الحقوق محفوظة &copy; 2023</p>
+	background-image:linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.20)),url("Q.jpg");
+     background-size:  100%; 
+     background-attachment: scroll;
+     background-position: 0% 0%;
+     background-repeat: no-repeat;
+     }
+     
+	 button{
+         background: black;
+		 filter: brightness(200%);
+         color:white;
+         text-shadow: 0px 0px 10px blue;
+         border-radius:6px;
+         border: 1.2px solid #d40000;
+         box-shadow: 0px 0px 5px black;
+         font-family:Jura;
+         padding:5px;
+          }
+		  
+	 marquee{
+  font-size:17px;
+		    }
+			
+ </style>
+     <body ><center>
+       <table height="65%" width="100%"><td align="center">
+         <img class="circle" height="400" src="githhub paage.png">
+       <h2>مجددا مرحبا بك، في هذه الصفحة سأخبرك القليل عن نفسي:</h2>
+       <h3>&quot;أنا خريج معاهد و تقني سامي في الإعلام الألي محب لكل ما له علاقة بالبرمجة&quot;</h3>
+	   <div>
+	   <marquee height='27' width='30%'direction="up" behavior="alternate" scrollamount='1'> ↓↓↓لا تحرمني الأجر و أستمع الي هذا الدعاء↓↓↓</marquee>
+	    </div>
+       <div class="animasi" align="bottom"> 
+       </div>
+       <button type="button" class="btn" onclick="play()">تشغيل <b>الدعاء</button><button type="button" class="btn" onclick="pause()">ايقاف <b>الدعاء</button><br><br>
+       <div id="clock"></div>
+       <script type="text/javascript">
+       function showTime() {
+         var a_p = "";
+         var today = new Date();
+         var curr_hour = today.getHours();
+         var curr_minute = today.getMinutes();
+         var curr_second = today.getSeconds();
+         if (curr_hour < 12) {
+           a_p = "AM";
+         } 
+         else 
+         {
+           a_p = "PM";
+           
+         }
+         if (curr_hour == 0) {
+           curr_hour = 12;
+         }
+         if (curr_hour > 12) {
+           curr_hour = curr_hour - 12;
+         }
+         curr_hour = checkTime(curr_hour);
+         curr_minute = checkTime(curr_minute);
+         curr_second = checkTime(curr_second);
+         document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+       }
+       function checkTime(i) {
+         if (i < 10) {
+           i = "0" + i;
+         }
+         return i;
+       }
+       setInterval(showTime, 500);
+       </script>
+       <script type="text/javascript">
+       var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+       var myDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday&#39;at', 'Saturday'];
+       var date = new Date();
+       var day = date.getDate();
+       var month = date.getMonth();
+       var thisDay = date.getDay(),
+       thisDay = myDays[thisDay];
+       var yy = date.getYear();
+       var year = (yy < 1000) ? yy + 1900 : yy;
+       document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+       </script>
+       </div><br>
+       <script>
+       function play() {
+         var audio = document.getElementById("lagu");
+         audio.play();
+       }
+       function pause() {
+         var audio = document.getElementById("lagu");
+         audio.pause();
+       }
+       </script>
+       <audio URL="audio1.ogg"></audio>
+	  </div>
+			<p>l.elmeki &copy; 2023</p>
 		</div>
-	</footer>
-
-</body>
-</html>
+       <html>
