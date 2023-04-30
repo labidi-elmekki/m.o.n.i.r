@@ -39,10 +39,18 @@
   font-size:17px;
 		    }
 			
+	a.1:link {color:#ff0000;}
+    a.1:visited {color:#0000ff;}
+    a.1:hover {font-size:150%;}
+		
  </style>
      <body ><center>
        <table height="65%" width="100%"><td align="center">
          <img class="circle" height="400" src="githhub paage.png">
+		  <div>
+		  <span style="cursor:pointer"> <a class="1" href="index.html" >عودة الى الصفحة الرئسيية</a></span>
+		 
+	   </div>
        <h2>مجددا مرحبا بك، في هذه الصفحة سأخبرك القليل عن نفسي:</h2>
        <h3>&quot;أنا خريج معاهد و تقني سامي في الإعلام الألي محب لكل ما له علاقة بالبرمجة&quot;</h3>
 	   <div>
@@ -50,7 +58,8 @@
 	    </div>
        <div class="animasi" align="bottom"> 
        </div>
-       <button type="button" class="btn" onclick="play()">تشغيل <b>الدعاء</button><button type="button" class="btn" onclick="pause()">ايقاف <b>الدعاء</button><br><br>
+     <button type="button" style="cursor:pointer" class="btn" onclick="play()">تشغيل <b>الدعاء</button>
+	 <button type="button"  style="cursor:pointer" class="btn" onclick="pause()">ايقاف <b>الدعاء</button><br><br>
        <div id="clock"></div>
        <script type="text/javascript">
        function showTime() {
@@ -101,15 +110,15 @@
        </div><br>
        <script>
        function play() {
-         var audio = document.getElementById("lagu");
+         var audio = document.getElementById("gogo");
          audio.play();
        }
        function pause() {
-         var audio = document.getElementById("lagu");
+         var audio = document.getElementById("gogo");
          audio.pause();
        }
        </script>
-       <audio URL="audio1.ogg"></audio>
+       <audio URL="audio1.ogg" id="gogo"> </audio>
 	  </div>
 			<p>l.elmeki &copy; 2023</p>
 		</div>
